@@ -11,6 +11,8 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
+app.UseCors(config => config.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
 app.UseAuthorization();
 
 app.MapControllers();
